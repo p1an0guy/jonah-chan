@@ -1,6 +1,6 @@
 export const formEndpoint =
   process.env.NEXT_PUBLIC_FORM_ENDPOINT ??
-  "https://example.com/form-endpoint";
+  "https://formspree.io/f/mzdbpwgy";
 
 export const analyticsConfig = {
   enabled: process.env.NEXT_PUBLIC_CF_ANALYTICS_ENABLED === "true",
