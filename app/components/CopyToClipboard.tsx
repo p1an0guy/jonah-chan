@@ -28,7 +28,7 @@ export default function CopyToClipboard({ text, label }: CopyToClipboardProps) {
       <button
         type="button"
         onClick={handleCopy}
-        className="rounded-full border border-accent/40 px-3 py-2 text-[10px] uppercase tracking-[0.3em] text-foreground/80 transition hover:border-accent hover:text-foreground focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+        className="inline-flex items-center justify-center rounded-full border border-accent/40 px-3 py-2 text-[10px] uppercase tracking-[0.3em] text-foreground/80 transition hover:border-accent hover:text-foreground focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background"
         aria-live="polite"
       >
         {copied ? "Copied" : "Copy"}

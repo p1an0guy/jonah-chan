@@ -7,6 +7,7 @@ import ProjectCard from "../components/ProjectCard";
 import Section from "../components/Section";
 import TerminalPanel from "../components/TerminalPanel";
 import Timeline from "../components/Timeline";
+import { contactInfo } from "../data/contact";
 import { experience } from "../data/experience";
 
 type ProjectSummary = {
@@ -257,7 +258,7 @@ export default function HomeClient({ projects }: HomeClientProps) {
                   Start a project
                 </Button>
                 <Button
-                  href="mailto:jchan332@calpoly.edu"
+                  href={`mailto:${contactInfo.email}`}
                   variant="outline"
                   size="sm"
                 >

@@ -4,6 +4,7 @@ import CopyToClipboard from "../components/CopyToClipboard";
 import IconLink from "../components/IconLink";
 import Section from "../components/Section";
 import TerminalPanel from "../components/TerminalPanel";
+import { contactInfo } from "../data/contact";
 
 export default function ContactPage() {
   return (
@@ -23,12 +24,12 @@ export default function ContactPage() {
             </div>
             <div className="mt-6 space-y-4 font-mono text-xs uppercase tracking-[0.3em] text-foreground/70">
               <div className="space-y-3">
-                <CopyToClipboard label="Email" text="hello@terminal.ai" />
-                <CopyToClipboard label="Phone" text="+01 404 001 0110" />
+                <CopyToClipboard label="Email" text={contactInfo.email} />
+                <CopyToClipboard label="Phone" text={contactInfo.phone} />
               </div>
-              <p>San Francisco, CA</p>
+              <p>{contactInfo.location}</p>
               <div className="flex flex-wrap gap-3">
-                <Button href="mailto:hello@terminal.ai" size="sm">
+                <Button href={`mailto:${contactInfo.email}`} size="sm">
                   Send Email
                 </Button>
                 <Button
