@@ -14,11 +14,12 @@ export default function ContactForm() {
     setState("submitting");
     setErrorMessage("");
 
-    const formData = new FormData(event.currentTarget);
+    const form = event.currentTarget;
+    const formData = new FormData(form);
 
     if (formData.get("company")) {
       setState("success");
-      event.currentTarget.reset();
+      form.reset();
       return;
     }
 
@@ -34,7 +35,7 @@ export default function ContactForm() {
       }
 
       setState("success");
-      event.currentTarget.reset();
+      form.reset();
     } catch (error) {
       setState("error");
       setErrorMessage(
