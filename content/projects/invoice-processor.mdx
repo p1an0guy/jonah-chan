@@ -1,0 +1,31 @@
+---
+order: 1
+title: Invoice Processor
+summary: AI-powered, interactive solution to reconcile invoices.
+solutionOverview: Multi-stage LLM invoice extractor and processor to supercharge human workflow.
+problem: |
+  Invoices are extremely difficult to manually verify, due to their length and
+  the fact that supporting documentation for any line item may be spread over numerous pages.
+constraints:
+  - Must keep a human in the loop for conflict resoluation at each stage.
+  - Needs to avoid LLM hallucination, even for large inputs.
+  - Pipeline had to be able to process encrypted/signed PDFs and scanned images.
+architecture: Text extraction + dynamic entity generation -> LLM object matching + manual review -> LLM reconciliation results.
+impact:
+  - Reduced chances of human error.
+  - Improved efficiency of employees verifying invoices.
+organization: AWS/Cal Poly DxHub
+role: Lead Engineer
+stack:
+  - Python
+  - PyMuPDF
+  - AWS Textract
+  - AWS Bedrock
+  - React frontend
+  - AWS Lambda, API Gateway, and CloudFormation
+tags:
+  - Public Sector
+  - AI
+  - Textract
+  - Data processing
+status: active

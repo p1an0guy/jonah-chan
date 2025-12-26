@@ -1,0 +1,36 @@
+---
+order: 3
+title: Panther Path Finder
+summary: A modern Streamlit campus-navigation chatbot that integrates with AWS S3 and Bedrock Knowledge Base for intelligent document retrieval and AI-powered responses.
+solutionOverview: Automated data ingestion to S3 -> Bedrock Knowledge Bases powering RAG chatbot.
+problem: Campuses experience under-utilization of resources due to difficulty in finding them.
+constraints:
+  - Must remain up-to-date with current class locations and new buildings.
+  - Needs to give clear, natural language directions to classrooms, bathrooms.
+  - Required to be accessible and easy-to-use for multiple languages.
+architecture: Course catalog and floor plan scraper feed an S3 bucket that backs the Bedrock Knowledge Base chatbot.
+impact:
+  - Save students an estimated 40+ hrs/semester of getting lost.
+  - Increase discovery and usage of campus resources.
+organization: AWS/Cal Poly DxHub AI Hackathon
+role: Backend Engineer
+stack:
+  - Streamlit
+  - Python
+  - AWS S3 and Bedrock
+tags:
+  - Public Sector
+  - Retrieval Augmented Generation
+  - Full-Stack Web Application
+status: shipped
+links:
+  - label: Repository
+    url: https://github.com/sixscripts-ai/panther-pathfinder-aws
+gallery:
+  - src: /images/pantherpathfinder.svg
+    alt: UI of the chatbot
+  - src: /images/hackathonbuddies.svg
+    alt: Image of friends with the Cal Poly logo
+  - src: /images/aihackathon.svg
+    alt: Programming during the hackathon
+---
