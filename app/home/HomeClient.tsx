@@ -85,7 +85,7 @@ export default function HomeClient({ projects }: HomeClientProps) {
                 <span className="text-accent">✔</span> Prototype + production
               </p>
               <p className="text-foreground/60">
-                Available for 2026 engagements in San Luis Obispo or remote.
+                Available for 2026 engagements in SLO or remote.
               </p>
             </div>
           </TerminalPanel>
