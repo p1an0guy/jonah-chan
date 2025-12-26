@@ -33,7 +33,7 @@ export default function ContactPage() {
                   Send Email
                 </Button>
                 <Button
-                  href="https://calendar.google.com"
+                  href="https://cal.com/jchan/website-call-booking"
                   variant="outline"
                   size="sm"
                   external
