@@ -4,6 +4,23 @@ import matter from "gray-matter";
 import { z } from "zod";
 
 const projectsDir = path.join(process.cwd(), "content", "projects");
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
+const withBasePath = (value: string) => {
+  if (!basePath) {
+    return value;
+  }
+  if (value.startsWith("http://") || value.startsWith("https://")) {
+    return value;
+  }
+  if (value.startsWith(`${basePath}/`)) {
+    return value;
+  }
+  if (value.startsWith("/")) {
+    return `${basePath}${value}`;
+  }
+  return value;
+};
 
 export const projectFrontmatterSchema = z.object({
   order: z.number().int().min(1, "Order is required."),
@@ -78,5 +95,9 @@ export async function getProjectBySlug(slug: string) {
     slug,
     content,
     ...parsed.data,
+    gallery: parsed.data.gallery.map((item) => ({
+      ...item,
+      src: withBasePath(item.src),
+    })),
   };
 }
